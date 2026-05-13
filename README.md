@@ -113,7 +113,7 @@ Se creó el primer componente reutilizable del proyecto para validar la arquitec
 ### Ruta del componente
 
 ```plaintext
-src/components/Profile/Profile.tsx
+src/components/Profile.tsx
 ```
 
 ### Código implementado
