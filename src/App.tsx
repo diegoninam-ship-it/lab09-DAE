@@ -1,9 +1,9 @@
+import Profile from './components/Profile';
+
 function App() {
   return (
-    <div>
-      <h1>CineSoilerS</h1>
-    </div>
-  );
+    <Profile />
+  )
 }
 
-export default App;
+export default App

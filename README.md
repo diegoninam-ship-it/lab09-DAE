@@ -1,75 +1,163 @@
-# React + TypeScript + Vite
+# CineSoilerS — Frontend Setup Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Verificación de NodeJS y npm
 
-Currently, two official plugins are available:
+Antes de crear el proyecto, se verificó la instalación correcta de NodeJS y npm en el entorno local.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Comandos ejecutados
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+node -v
+npm -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Evidencia
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### NodeJS y npm Version
+![NodeJS y npmVersion](./Docs/nodenpm-version-check.png)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+
+---
+
+## 2. Creación del entorno y proyecto
+
+Se utilizó Vite como herramienta de inicialización para crear un proyecto moderno basado en React y TypeScript.
+
+### Comando de creación
+
+```bash
+npm create vite@latest
 ```
+### Instalación de dependencias
+
+```bash
+npm install
+```
+
+### Evidencia
+
+#### Vite Project Creation
+![Vite Project Creation](./Docs/vite-project-creation.png)
+
+
+## 3. Levantamiento del proyecto
+
+Una vez instaladas las dependencias, se ejecutó el servidor de desarrollo local usando Vite.
+
+### Comando ejecutado
+
+```bash
+npm run dev
+```
+
+### Resultado esperado
+
+El servidor local queda disponible en:
+
+```plaintext
+http://localhost:5173/
+```
+
+### Evidencia
+
+#### Initial React App
+![Initial React App](./Docs/initial-react-app.png)
+
+---
+
+## 4. Limpieza del proyecto y estructura de carpetas actual
+
+Se eliminaron los archivos de ejemplo generados automáticamente por Vite para iniciar con una estructura limpia y profesional.
+
+### Archivos eliminados
+
+```plaintext
+src/assets/react.svg
+src/App.css
+src/index.css
+```
+
+### Nuevo contenido de App.tsx
+
+```tsx
+function App() {
+  return (
+    <div>
+      <h1>CineSoilerS</h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### Resultado obtenido
+
+La aplicación ahora muestra únicamente el título principal del proyecto.
+
+### Estructura actual del proyecto
+
+
+### Evidencia
+
+#### Clean Project Structure
+![Clean Project Structure](./Docs/clean-project-structure.png)
+
+#### Clean React App
+![Clean React App](./clean-react-app.png)
+
+---
+
+## 5. Creación de nuevo componente Profile
+
+Se creó el primer componente reutilizable del proyecto para validar la arquitectura inicial basada en componentes.
+
+### Ruta del componente
+
+```plaintext
+src/components/Profile/Profile.tsx
+```
+
+### Código implementado
+
+```tsx
+const Profile = () => {
+    return (
+        <header>
+            <h1>Diego Nina</h1>
+            <h2>Frontent Developer</h2>
+        </header>
+    );
+}
+
+export default Profile;
+```
+### Evidencia
+
+![new Component](./Docs/profile.png)
+
+### Integración en App.tsx
+
+```tsx
+import Profile from './components/Profile';
+
+function App() {
+  return (
+    <Profile />
+  )
+}
+
+export default App;
+```
+
+### Evidencia
+
+#### Profile Component Render
+![Profile Component Render](./Docs/profile-component-render.png)
+
+---
+
+# Conclusión
+
+Se logró preparar correctamente el entorno inicial del proyecto CineSoilerS utilizando React, Vite y TypeScript, estableciendo una base limpia, organizada y escalable para futuras funcionalidades del sistema e-commerce.
