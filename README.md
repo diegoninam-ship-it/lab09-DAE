@@ -14,7 +14,7 @@ npm -v
 ### Evidencia
 
 #### NodeJS y npm Version
-![NodeJS y npmVersion](./Docs/nodenpm-version-check.png)
+![NodeJS y npmVersion](./docs/nodenpm-version-check.png)
 
 
 
@@ -38,7 +38,7 @@ npm install
 ### Evidencia
 
 #### Vite Project Creation
-![Vite Project Creation](./Docs/vite-project-creation.png)
+![Vite Project Creation](./docs/vite-project-creation.png)
 
 
 ## 3. Levantamiento del proyecto
@@ -62,7 +62,7 @@ http://localhost:5173/
 ### Evidencia
 
 #### Initial React App
-![Initial React App](./Docs/initial-react-app.png)
+![Initial React App](./docs/initial-react-app.png)
 
 ---
 
@@ -102,10 +102,7 @@ La aplicación ahora muestra únicamente el título principal del proyecto.
 ### Evidencia
 
 #### Clean Project Structure
-![Clean Project Structure](./Docs/clean-project-structure.png)
-
-#### Clean React App
-![Clean React App](./clean-react-app.png)
+![Clean Project Structure](./docs/clean-project-structure.png)
 
 ---
 
@@ -135,7 +132,7 @@ export default Profile;
 ```
 ### Evidencia
 
-![new Component](./Docs/profile.png)
+![new Component](./docs/profile.png)
 
 ### Integración en App.tsx
 
@@ -154,7 +151,7 @@ export default App;
 ### Evidencia
 
 #### Profile Component Render
-![Profile Component Render](./Docs/profile-component-render.png)
+![Profile Component Render](./docs/profile-component-render.png)
 
 ---
 
@@ -189,7 +186,7 @@ export default Profile;
 ### Evidencia
 
 #### Dynamic Profile Component Render
-![Dynamic Profile Component Render](./Docs/dynamic-profile-component-render.png)
+![Dynamic Profile Component Render](./docs/dynamic-profile-component-render.png)
 
 # Conclusión
 
