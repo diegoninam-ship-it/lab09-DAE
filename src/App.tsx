@@ -2,7 +2,16 @@ import Profile from './components/Profile';
 
 function App() {
   return (
-    <Profile />
+    <div>
+      <Profile
+        name="Diego Nina"
+        role="Frontend Developer"
+      />
+      <Profile
+        name="John Doe"
+        role="Backend Developer"
+      />  
+    </div>
   )
 }
 

@@ -158,6 +158,39 @@ export default App;
 
 ---
 
+---
+
+## 6. Componente Profile dinámico
+
+El componente `Profile` fue modificado para recibir props dinámicas desde `App.tsx`.
+
+### Nuevo componente
+
+```tsx
+type ProfileProps = {
+    name: string;
+    role: string;
+}
+
+const Profile = ({ name, role }: ProfileProps) => {
+    return (
+        <header>
+            <h1>{name}</h1>
+            <h2>{role}</h2>
+        </header>
+    );
+}
+
+export default Profile;
+```
+
+### Uso en App.tsx
+
+### Evidencia
+
+#### Dynamic Profile Component Render
+![Dynamic Profile Component Render](./Docs/dynamic-profile-component-render.png)
+
 # Conclusión
 
 Se logró preparar correctamente el entorno inicial del proyecto CineSoilerS utilizando React, Vite y TypeScript, estableciendo una base limpia, organizada y escalable para futuras funcionalidades del sistema e-commerce.
